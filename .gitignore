@@ -1,0 +1,11 @@
+# Ignorar todo por defecto
+/*
+
+# Mantener el propio .gitignore
+!/.gitignore
+
+# Mantener utilidades compartidas
+!/src/
+/src/*
+!/src/utils/
+!/src/utils/**
