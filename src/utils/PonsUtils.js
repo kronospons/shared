@@ -4,8 +4,15 @@
  * Este módulo contiene funciones útiles para el manejo y conversión de fechas
  * que pueden ser utilizadas en cualquier proyecto Node.js
  * 
- * @author Sistema de Laboratorio
+ * Este módulo es parte del proyecto COSI BANK / COSI LAB / COSI VET, desarrollado por el Alejandro Pons.
+ * 
+ * @author Alejandro García La Sienrra Pons
  * @version 1.0.0
+ * @since 2026-04-16
+ * @license MIT
+ * @copyright 2026 Alejandro García La Sienrra Pons
+ * @see https://grupocosi.com/laboratorio
+ * @see https://grupocosi.com/banco
  */
 
 // Cargar moment-timezone - Node.js lo buscará desde el contexto de ejecución
