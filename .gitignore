@@ -4,6 +4,11 @@
 # Mantener el propio .gitignore
 !/.gitignore
 
+# Mantener archivos base del paquete
+!/package.json
+!/README.md
+!/.npmignore
+
 # Mantener utilidades compartidas
 !/src/
 /src/*

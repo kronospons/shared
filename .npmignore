@@ -1,0 +1,17 @@
+# Archivos fuente (permitir utils para consumo directo)
+src/**/*
+!src/utils/**/*.js
+!src/utils/**/*.d.ts
+
+# Configuración
+tsconfig.json
+*.bat
+
+# Docs de desarrollo
+SOLUCION-*.md
+COMANDOS-*.md
+CHECKLIST-*.md
+CONFIGURACION-*.md
+
+# Node modules - NO copiar (los frontends tienen sus propias dependencies)
+node_modules/
