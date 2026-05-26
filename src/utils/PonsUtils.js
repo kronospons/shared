@@ -168,6 +168,40 @@ class PonsUtils {
     }
 
     /**
+     * Obtiene el rango del día actual en la zona horaria configurada.
+     * startDate/endDate se regresan en ISO UTC para consumo de APIs externas.
+     * @returns {{ startDate: string, endDate: string, fechaLocal: string, timezone: string }}
+     */
+    static getRangoDiaActualISO() {
+        const timezone = this.getTimezone();
+
+        if (moment) {
+            const inicio = moment().tz(timezone).startOf('day');
+            const fin = moment().tz(timezone).endOf('day');
+
+            return {
+                startDate: inicio.toISOString(),
+                endDate: fin.toISOString(),
+                fechaLocal: inicio.format('YYYY-MM-DD'),
+                timezone
+            };
+        }
+
+        const now = new Date();
+        const start = new Date(now);
+        start.setHours(0, 0, 0, 0);
+        const end = new Date(now);
+        end.setHours(23, 59, 59, 999);
+
+        return {
+            startDate: start.toISOString(),
+            endDate: end.toISOString(),
+            fechaLocal: this.getFechaActual(),
+            timezone: 'local'
+        };
+    }
+
+    /**
      * Genera una contraseña aleatoria
      * @param {number} longitud - Longitud de la contraseña
      * @returns {string} Contraseña aleatoria

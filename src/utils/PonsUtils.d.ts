@@ -45,6 +45,16 @@ declare class PonsUtils {
     static getFechaActualISO(): string;
 
     /**
+     * Obtiene el rango del día actual en la zona horaria configurada
+     */
+    static getRangoDiaActualISO(): {
+        startDate: string;
+        endDate: string;
+        fechaLocal: string;
+        timezone: string;
+    };
+
+    /**
      * Genera una contraseña aleatoria
      * @param {number} longitud - Longitud de la contraseña
      * @returns {string} Contraseña aleatoria
